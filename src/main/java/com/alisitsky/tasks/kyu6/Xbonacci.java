@@ -72,14 +72,29 @@ public class Xbonacci {
     }
 
     public static double[] tribonacci3(double[] dArr, int n) {
-        double[] tritab=Arrays.copyOf(dArr, n);
-        for(int i=3;i<n;i++){
-            tritab[i]=tritab[i-1]+tritab[i-2]+tritab[i-3];
+        double[] tritab = Arrays.copyOf(dArr, n);
+        for (int i = 3; i < n; i++) {
+            tritab[i] = tritab[i - 1] + tritab[i - 2] + tritab[i - 3];
         }
         System.out.println(Arrays.toString(tritab));
         return tritab;
     }
 
+
+    public static double[] xbonacci(double[] signature, int n) {
+        int X = signature.length;
+        double[] result = Arrays.copyOf(signature, n);
+        int lastKnownElement = X >= n ? n : X;
+
+        for (int i = lastKnownElement; i < n; i++) {
+            double sumToAdd = 0;
+            for (int j = i - 1; j >= i - X; j--)
+                sumToAdd += result[j];
+            result[i] = sumToAdd;
+        }
+        System.out.println(Arrays.toString(result));
+        return result;
+    }
 }
 
 

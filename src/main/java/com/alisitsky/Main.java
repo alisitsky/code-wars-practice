@@ -15,9 +15,6 @@ import static java.util.Arrays.asList;
 
 public class Main {
     public static void main(String[] args) {
-        String a[] = new String[]{ "live" ,"arp", "strong" };
-        String b[] = new String[] { "lively", "alive", "harp", "sharp", "armstrong" };
-        String r[] = new String[] { "arp", "live", "strong" };
-        WhichAreIn.inArray(a, b);
+        xbonacci(new double []{0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},20);
     }
 }
