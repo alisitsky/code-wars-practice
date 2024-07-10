@@ -4,24 +4,30 @@ package com.alisitsky;
 //import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-import com.alisitsky.tasks.kyu6.WhichAreIn;
-import com.alisitsky.tasks.kyu6.Xbonacci;
+import com.alisitsky.tasks.kyu5.DirReduction;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.Arrays;
 
-import static com.alisitsky.tasks.kyu6.Xbonacci.*;
-import static java.util.Arrays.asList;
 
 public class Main {
+
     public static void main(String[] args) {
-        xbonacci(new double []{0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},20);
+
+//        System.out.println(checkPair("NORTH","WEST"));
+//        System.out.println(checkPair("SOUTH","WEST"));
+
+        // WEST:
+        System.out.println(Arrays.toString(
+                DirReduction.dirReduc(new String[]{
+                        "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"
+                })
+        ));
+        // []:
+        System.out.println(Arrays.toString(
+                DirReduction.dirReduc(new String[]{
+                        "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"
+                })
+        ));
     }
 
-    public static int frequency(ArrayList<Integer> list, Integer element) {
-
-        return Collections.frequency(list, element);
-    }
 }
