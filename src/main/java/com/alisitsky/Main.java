@@ -5,6 +5,7 @@ package com.alisitsky;
 
 
 import com.alisitsky.tasks.kyu5.DirReduction;
+import com.alisitsky.tasks.kyu5.RgbToHex;
 
 import java.util.Arrays;
 
@@ -12,22 +13,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-
-//        System.out.println(checkPair("NORTH","WEST"));
-//        System.out.println(checkPair("SOUTH","WEST"));
-
-        // WEST:
-        System.out.println(Arrays.toString(
-                DirReduction.dirReduc(new String[]{
-                        "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"
-                })
-        ));
-        // []:
-        System.out.println(Arrays.toString(
-                DirReduction.dirReduc(new String[]{
-                        "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"
-                })
-        ));
+        RgbToHex.rgb(-20, 275, 125);
     }
 
 }
